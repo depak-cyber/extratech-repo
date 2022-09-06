@@ -4,25 +4,20 @@
           Your Logo
         </a>
     </div>
+
     <ul class="nav">
         <li class="nav-item active">
-            <a class="nav-link" href="dashboard.html">
-                <i class="nc-icon nc-icon nc-paper-2"></i>
-                <p>First example</p>
+            <a class="nav-link" href="{{url('admin/users')}}">Users
+                
             </a>
         </li>
-        <li>
-            <a class="nav-link" href="./user.html">
-                <i class="nc-icon nc-bell-55"></i>
-                <p>Second example</p>
+        <li class="nav-item active">
+            <a class="nav-link" href="{{url('admin/add-post')}}">Add Post</a>
+            <a class="nav-link" href="{{url('admin/posts')}}">View Post</a>
+                
             </a>
         </li>
 
-        <li class="nav-item active active-pro">
-            <a class="nav-link active" href="javascript:;">
-                <i class="nc-icon nc-alien-33"></i>
-                <p>Upgrade plan</p>
-            </a>
-        </li>
-    </ul>
+    </ul>    
+   
 </div>
