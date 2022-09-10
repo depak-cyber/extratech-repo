@@ -21,7 +21,8 @@ class PostController extends Controller
         $validate= $request->validate([
           'title'=>['required','string'],
           'articles'=>['required','string'],
-          'status'=>['required','string']
+          'status'=>['string'],
+          
         ]); 
         $post= new Post;
         $post->title=$validate['title'];

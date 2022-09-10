@@ -7,6 +7,11 @@
 
     <ul class="nav">
         <li class="nav-item active">
+            <a class="nav-link" href="{{url('users/profile')}}">Profile
+                
+            </a>
+        </li>
+        <li class="nav-item active">
             <a class="nav-link" href="{{url('admin/users')}}">Users
                 
             </a>

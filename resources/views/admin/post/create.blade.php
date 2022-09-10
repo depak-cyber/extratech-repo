@@ -31,8 +31,9 @@
               <div class='row'>
                <div class="col-md-4"> 
               <div class="mb-3">
-                <label for="">Status</label>
-                <input type='checkbox' name='status' class='form-control'/>
+                <label class="form-check-label" for="">Status</label>
+                <input   type="checkbox" name='status' />
+                
               </div>
             </div>
             <div class="col-md-8">

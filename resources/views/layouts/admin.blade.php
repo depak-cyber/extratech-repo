@@ -32,6 +32,7 @@
     </div>
     <div class="main-panel">
         @include('layouts.inc.navbar')
+        
       
      <div class='content'>
     

@@ -38,6 +38,7 @@
                 @endforeach
               </tbody>
             </table>  
+            <div class='your paginate'>{{$users->links()}}</div>
         </div>
     </div>
   </div>
