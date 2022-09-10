@@ -12,33 +12,38 @@
    <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    
+
     <!-- styles -->
     <link  href="{{asset('admin/css/bootstrap.min.css')}}" rel='stylesheet'>
     <link  href="{{asset('admin/css/light-bootstrap-dashboard.css?v=2.0.0')}}" rel='stylesheet'>
+    <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}"></script>
+   <!--End styles -->
 
-    
-    
-    
-   
-    
+
+
 </head>
 <body>
     <div class="wrapper">
     <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
-    
+
       @include('layouts.inc.sidebar')
-      
+
     </div>
     <div class="main-panel">
+<<<<<<< HEAD
         @include('layouts.inc.navbar')
         
       
+=======
+
+    @include('layouts.inc.navbar')
+
+>>>>>>> 2b9288cd6fb6e5436431058fccfa9d0a190df643
      <div class='content'>
-    
+
       @yield('content')
     </div>
-</div> 
+</div>
     @include('layouts.inc.footer')
 </div>
 
