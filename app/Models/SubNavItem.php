@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubNavItem extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'name',
+        'nav_item_id',
+        'status',
+
+        ];
 }

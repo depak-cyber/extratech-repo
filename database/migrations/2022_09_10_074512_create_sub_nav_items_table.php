@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('sub_nav_items', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->unsignedBigInteger('nav_item_id'); // main navigation name it belongs to id
+            $table->string('status');
             $table->timestamps();
         });
     }

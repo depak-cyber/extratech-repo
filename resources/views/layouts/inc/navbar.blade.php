@@ -10,9 +10,21 @@
         <ul class="navbar-nav ms-auto">
 
             @foreach ($navItems as $item )
-            <li class="nav-item">
-              <a class="nav-link" href="#">{{$item->name}}</a>
+            @if (count($item->subnavigation)>0)
+            <li class="nav-item dropdown">
+                <a class="nav-link route dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{$item->name}}</a>
+                <div class="dropdown-menu dropdown-menu-end fade-down dropdown-academy" aria-labelledby="navbarDropdownMenuLink">
+                    @foreach ($item->subnavigation as $subnav)
+                        <a class="dropdown-item" href="">{{$subnav->name}} </a>
+                        <div class="dropdown-divider"></div>
+                    @endforeach
+               </div>
             </li>
+            @else
+              <li class="nav-item">
+                <a class="nav-link" href="#">{{$item->name}}</a>
+              </li>
+            @endif
             @endforeach
 
            {{--Lists for services

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\NavItem;
+use App\Models\SubNavItem;
 use Illuminate\Http\Request;
 
-
-class NavItemController extends Controller
+class SubNavItemsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +25,8 @@ class NavItemController extends Controller
      */
     public function create()
     {
-        return view('admin.post.createNav');
+        $navItems= NavItem::where('status','Enabled')->get();
+        return view('admin.post.createSubNav', compact('navItems'));
     }
 
     /**
@@ -36,12 +37,12 @@ class NavItemController extends Controller
      */
     public function store(Request $request)
     {
-        NavItem::create([
-         'name'=> $request->navbar_name,
-         'status'=> $request->status,
-        ]);
-
-        return redirect("navitem/create")->with('message', 'Navbar name added successfully');
+     SubNavItem::create([
+        'name'=> $request->subnavbar_name,
+        'nav_item_id'=>$request->nav_item_id,
+        'status'=> $request->status,
+       ]);
+       return redirect("subnavitem/create")->with('message', 'Dropdown name added successfully');
     }
 
     /**

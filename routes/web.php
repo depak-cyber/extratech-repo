@@ -40,7 +40,7 @@ Route::get('users',[App\Http\Controllers\Admin\UserController::class, 'index']);
 Route::get('users/{id}',[App\Http\Controllers\Admin\UserController::class, 'edit']);
 });
 
-
+// For Navbar
 Route::get('/navitem/create',[
     'uses'=>'NavItemController@create',
     'as' =>'navitem.create',
@@ -51,3 +51,14 @@ Route::post('/navitem/store',[
     'as' =>'navitem.store',
 ]);
 
+//for sub..
+Route::get('/subnavitem/create',[
+    'uses'=>'SubNavItemsController@create',
+    'as' =>'subnavitem.create',
+]);
+
+Route::post('/subnavitem/store',[
+    'uses'=>'SubNavItemsController@store',
+    'as' =>'subnavitem.store',
+]);
+//End of Navbar
