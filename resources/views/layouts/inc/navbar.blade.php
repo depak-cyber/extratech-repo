@@ -26,60 +26,6 @@
               </li>
             @endif
             @endforeach
-
-           {{--Lists for services
-            <li class="nav-item dropdown">
-                <a class="nav-link route dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a>
-                <div class="dropdown-menu dropdown-menu-end fade-down dropdown-academy" aria-labelledby="navbarDropdownMenuLink">
-                    <table class="table table-borderless">
-                        <tr>
-                          <th><a class="dropdown-item">Food</a></th>
-                          <th><a class="dropdown-item">Health Care</a></th>
-                        </tr>
-                      <tr>
-                        <td><a class="dropdown-item">Counselling</a></td>
-                        <td><a class="dropdown-item" >School Supplies</a></td>
-                      </tr>
-                      <tr>
-                        <td> <a class="dropdown-item" >Physical Activity</a></td>
-                        <td><a class="dropdown-item" >The Arts</a></td>
-                      </tr>
-                      <tr>
-                        <td> <a class="dropdown-item">Social Work</a></td>
-                      </tr>
-                </table>
-               </div>
-            </li>
-
-          {{--Lists for Academy
-          <li class="nav-item dropdown">
-            <a class="nav-link route dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACADEMY</a>
-            <div class="dropdown-menu dropdown-menu-end fade-down dropdown-academy" aria-labelledby="navbarDropdownMenuLink">
-                <table class="table table-borderless">
-                    <tr>
-                      <th><a class="dropdown-item" >Network &amp; System Support</a></th>
-                      <th><a class="dropdown-item" >Data Analytics</a></th>
-                    </tr>
-                  <tr>
-                    <td> <a class="dropdown-item" >Web Development (PHP Laravel)</a></td>
-                    <td><a class="dropdown-item" >Web Development (Python Django)</a></td>
-                  </tr>
-                  <tr>
-                    <td> <a class="dropdown-item" >Career Counselling</a></td>
-                    <td> <a class="dropdown-item" >Digital Marketing</a></td>
-                  </tr>
-                  <tr>
-                    <td> <a class="dropdown-item" >Accounting</a></td>
-                    <td><a class="dropdown-item" >Advance Network Engineering</a></td>
-                  </tr>
-                  <tr>
-                    <td>  <a class="dropdown-item" >Advance System Engineering</a></td>
-                    <td></td>
-                  </tr>
-            </table>
-            </div>
-        </li>
-        --}}
         </ul>
       </div>
     </div>
