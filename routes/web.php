@@ -29,7 +29,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
    });
 
 
-
+Route::match(['get', 'post'],'login', 'AdminController@login');
 Route::get('posts',[App\Http\Controllers\Admin\PostController::class, 'index']);
 Route::get('add-post', [App\Http\Controllers\Admin\PostController::class, 'create']);
 Route::post('add-post', [App\Http\Controllers\Admin\PostController::class, 'store']);
@@ -38,7 +38,16 @@ Route::put('update-post/{id}', [App\Http\Controllers\Admin\PostController::class
 Route::get('delete-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'destroy']);
 Route::get('users',[App\Http\Controllers\Admin\UserController::class, 'index']);
 Route::get('users/{id}',[App\Http\Controllers\Admin\UserController::class, 'edit']);
-
-
 });
+
+
+Route::get('/navitem/create',[
+    'uses'=>'NavItemController@create',
+    'as' =>'navitem.create',
+]);
+
+Route::post('/navitem/store',[
+    'uses'=>'NavItemController@store',
+    'as' =>'navitem.store',
+]);
 

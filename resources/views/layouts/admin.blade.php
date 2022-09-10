@@ -30,7 +30,8 @@
 
     </div>
     <div class="main-panel">
-        @include('layouts.inc.navbar')
+
+    {{-- @include('layouts.inc.navItems.nav')--}}
 
      <div class='content'>
 

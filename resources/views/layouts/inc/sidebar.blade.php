@@ -5,19 +5,21 @@
         </a>
     </div>
 
+
+
     <ul class="nav">
         <li class="nav-item active">
             <a class="nav-link" href="{{url('admin/users')}}">Users
-                
+
             </a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="{{url('admin/add-post')}}">Add Post</a>
             <a class="nav-link" href="{{url('admin/posts')}}">View Post</a>
-                
+            <a class="nav-link" href="{{route('navitem.create')}}">Add Navbar</a>
             </a>
         </li>
 
-    </ul>    
-   
+    </ul>
+
 </div>
