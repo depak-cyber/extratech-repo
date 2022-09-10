@@ -8,7 +8,14 @@
       <ul class="nav-menu">
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
-           {{--Lists for services--}}
+
+            @foreach ($navItems as $item )
+            <li class="nav-item">
+              <a class="nav-link" href="#">{{$item->name}}</a>
+            </li>
+            @endforeach
+
+           {{--Lists for services
             <li class="nav-item dropdown">
                 <a class="nav-link route dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a>
                 <div class="dropdown-menu dropdown-menu-end fade-down dropdown-academy" aria-labelledby="navbarDropdownMenuLink">
@@ -32,15 +39,7 @@
                </div>
             </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">PROJECT</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">ABOUT US</a>
-          </li>
-
-          {{--Lists for Academy--}}
+          {{--Lists for Academy
           <li class="nav-item dropdown">
             <a class="nav-link route dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ACADEMY</a>
             <div class="dropdown-menu dropdown-menu-end fade-down dropdown-academy" aria-labelledby="navbarDropdownMenuLink">
@@ -68,14 +67,7 @@
             </table>
             </div>
         </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">BLOG</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">CONTACT US</a>
-          </li>
-
+        --}}
         </ul>
       </div>
     </div>

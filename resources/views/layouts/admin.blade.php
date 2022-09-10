@@ -31,7 +31,7 @@
     </div>
     <div class="main-panel">
 
-    {{-- @include('layouts.inc.navItems.nav')--}}
+    @include('layouts.inc.navbar')
 
      <div class='content'>
 

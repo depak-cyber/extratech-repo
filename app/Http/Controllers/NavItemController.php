@@ -38,10 +38,10 @@ class NavItemController extends Controller
     {
         NavItem::create([
          'name'=> $request->navbar_name,
-         'status'=>$request->status,
+         'status'=> $request->status,
         ]);
 
-        return redirect("navitem/create")->with('message', 'Navbar name added successfully');
+        return redirect()->with('message', 'Navbar name added successfully');
     }
 
     /**
