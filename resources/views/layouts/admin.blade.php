@@ -30,15 +30,9 @@
 
     </div>
     <div class="main-panel">
-<<<<<<< HEAD
-        @include('layouts.inc.navbar')
-        
-      
-=======
 
     @include('layouts.inc.navbar')
 
->>>>>>> 2b9288cd6fb6e5436431058fccfa9d0a190df643
      <div class='content'>
 
       @yield('content')

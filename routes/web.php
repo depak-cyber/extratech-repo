@@ -31,7 +31,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
    });
 
 
-<<<<<<< HEAD
 
         Route::get('posts',[App\Http\Controllers\Admin\PostController::class, 'index']);
         Route::get('add-post', [App\Http\Controllers\Admin\PostController::class, 'create']);
@@ -43,19 +42,6 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('users/{id}',[App\Http\Controllers\Admin\UserController::class, 'edit']);
 
 
-});
-
-
-=======
-Route::match(['get', 'post'],'login', 'AdminController@login');
-Route::get('posts',[App\Http\Controllers\Admin\PostController::class, 'index']);
-Route::get('add-post', [App\Http\Controllers\Admin\PostController::class, 'create']);
-Route::post('add-post', [App\Http\Controllers\Admin\PostController::class, 'store']);
-Route::get('post/{id}', [App\Http\Controllers\Admin\PostController::class, 'edit']);
-Route::put('update-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'update']);
-Route::get('delete-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'destroy']);
-Route::get('users',[App\Http\Controllers\Admin\UserController::class, 'index']);
-Route::get('users/{id}',[App\Http\Controllers\Admin\UserController::class, 'edit']);
 });
 
 // For Navbar
@@ -80,4 +66,3 @@ Route::post('/subnavitem/store',[
     'as' =>'subnavitem.store',
 ]);
 //End of Navbar
->>>>>>> 2b9288cd6fb6e5436431058fccfa9d0a190df643
