@@ -66,3 +66,8 @@ Route::post('/subnavitem/store',[
     'as' =>'subnavitem.store',
 ]);
 //End of Navbar
+
+//Testimonals
+Route::get('testimonals/create', [App\Http\Controllers\TestimonalController::class, 'create']);
+Route::post('testimonals/store', [App\Http\Controllers\TestimonalController::class, 'store']);
+//End of Testimonals

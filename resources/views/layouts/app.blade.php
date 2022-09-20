@@ -81,5 +81,6 @@
     </div>
     <!-- Scripts -->
     <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery-3.6.1.min.js')}}"></script>
 </body>
 </html>

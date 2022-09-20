@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
     <!-- styles -->
-    <link  href="{{asset('admin/css/bootstrap.min.css')}}" rel='stylesheet'>
+    <link  href="{{asset('admin/css/bootstrap5.css')}}" rel='stylesheet'>
     <link  href="{{asset('admin/css/light-bootstrap-dashboard.css?v=2.0.0')}}" rel='stylesheet'>
-    <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}"></script>
    <!--End styles -->
 
 
@@ -42,7 +41,7 @@
 </div>
 
 <!-- Scripts -->
-    <script src="{{asset('admin/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('admin/js/popper.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
 </body>
