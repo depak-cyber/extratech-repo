@@ -82,5 +82,8 @@
     <!-- Scripts -->
     <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-3.6.1.min.js')}}"></script>
+    <script src="{{asset('admin/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('admin/js/popper.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
 </body>
 </html>

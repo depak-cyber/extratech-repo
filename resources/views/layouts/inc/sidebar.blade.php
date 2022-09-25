@@ -5,14 +5,11 @@
         </a>
     </div>
 
-
-
     <ul class="nav">
         <li class="nav-item active">
-            <a class="nav-link" href="{{url('users/profile')}}">Profile
-
-            </a>
+            <a class="nav-link" href="{{url('users/profile')}}">Profile </a>
         </li>
+
         <li class="nav-item active">
             <a class="nav-link" href="{{url('admin/users')}}">Users </a>
         </li>
@@ -32,10 +29,9 @@
                <li> <a class="nav-link" href="{{url('/subnavitem/create')}}">Add SubNavbar</a></li>
             </ul>
         </li>
-        </li>
+
         <li>
             <a class="nav-link" href="{{url('testimonals/create')}}">Add Testimonals</a>
         </li>
     </ul>
-
 </div>

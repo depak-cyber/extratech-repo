@@ -10,8 +10,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
    <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+   <!--     Fonts and icons     -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- styles -->
     <link  href="{{asset('admin/css/bootstrap5.css')}}" rel='stylesheet'>
@@ -41,8 +43,13 @@
 </div>
 
 <!-- Scripts -->
-    <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('admin/js/popper.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
+   <!-- Scripts -->
+   <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}" type="text/javascript"></script>
+
+   <script src="{{asset('admin/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script src="{{asset('admin/js/popper.min.js')}}" type="text/javascript"></script>
+   <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
 </body>
 </html>

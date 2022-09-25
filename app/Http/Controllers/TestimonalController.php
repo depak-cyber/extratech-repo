@@ -7,59 +7,62 @@ use Illuminate\Http\Request;
 
 class TestimonalController extends Controller
 {
-    public function index()
-    {
-     return view('admin.user.testimonals');
-    }
 
     public function create()
     {
+
      return view('admin.post.createTestimonals');
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'title'=> 'required','string', 'max:255',
-            'description'=>'required','string', 'max:800',
-             'image'=>'nullable','image', 'mimes:jpg,jpeg,png', // Only allow .jpg, .bmp and .png file types.
-            'status'=>'nullable',
+        $validate= $request->validate([
+            'title'=>['required','string'],
+            'description'=>['required','string'],
+            'status'=>['string'],
           ]);
 
-         /*  if ($request->hasFile('image'))
-           {
+           $testimonal= new Testimonal;
+           $testimonal->title=$validate['title'];
+           $testimonal->description=$validate['description'];
+           //$testimonal->image=$validate['image'];
+           $testimonal->status=$request->status == true ? '1':'0';
 
-            $file = $request->file('image');
-            $extension= $file->getClientOriginalExtension();
-            $filename = time().'.'.$extension;
-            $file->move('public/testimonals/', $filename);
-            $data['image']= "public/testimonals/".$filename;
-           } */
-
-           if ($request->hasFile('image')) {
+          if ($request->hasFile('image')) {
 
             $request->validate([
                 'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
             ]);
-            $request->file('image')->store('public/testimonals');
-            $data['image'] =$request->file('image')->getClientOriginalName();
 
+            $request->file('image')->store('admin/images');
+            $testimonal->image =$request->file('image')->getClientOriginalName();
+           }
+
+           $testimonal->save();
+
+           $testimonal = Testimonal::all();
+
+          // return redirect('testimonals/store')->with('message', 'Testimonals added successfully');
+         return view('admin.user.testimonals', compact('testimonal'));
         }
 
-          $data = $request->all();
-
-          $data['status'] = $request->status == true ? '1':'0'; //when it is true, checked (1) else not checked(0).
-
-        //inserting data into user table
-        Testimonal::create([
-            'title' => $data['title'],
-            'description' =>$data['description'],
-            'image' => $data['image'],
-            'status' => $data['status'],
-        ]);
-
-        return view('admin.user.testimonals')->with('success', 'Testimonals added successfully!!');
-    }
+        public function view()
+         {
+          $testimonal = Testimonal::all();
+          return view('admin.user.testimonals', compact('testimonal'));
+         }
 
 
+         public function edit($id)
+         {
+            $testimonal = Testimonal::find($id);
+            return view('admin.post.createTestimonals',compact('testimonal'));
+         }
+
+         public function destroy($id)
+          {
+            $testimonal = Testimonal::find($id);
+            $testimonal->delete();
+            return redirect('view')->with('message', 'Testimonal deleted successfully');
+         }
 }

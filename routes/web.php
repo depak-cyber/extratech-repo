@@ -69,5 +69,8 @@ Route::post('/subnavitem/store',[
 
 //Testimonals
 Route::get('testimonals/create', [App\Http\Controllers\TestimonalController::class, 'create']);
+Route::get('view', [App\Http\Controllers\TestimonalController::class, 'view']);
+Route::get('delete-testimonals/{id}', [App\Http\Controllers\TestimonalController::class, 'destroy']);
+Route::post('update-testimonals/{id}', [App\Http\Controllers\TestimonalController::class, 'edit']);
 Route::post('testimonals/store', [App\Http\Controllers\TestimonalController::class, 'store']);
 //End of Testimonals
