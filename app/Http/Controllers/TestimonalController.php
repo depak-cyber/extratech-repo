@@ -10,7 +10,6 @@ class TestimonalController extends Controller
 
     public function create()
     {
-
      return view('admin.post.createTestimonals');
     }
 
@@ -49,6 +48,7 @@ class TestimonalController extends Controller
         public function view()
          {
           $testimonal = Testimonal::all();
+          $testimonal = Testimonal::paginate(3);
           return view('admin.user.testimonals', compact('testimonal'));
          }
 
@@ -64,5 +64,11 @@ class TestimonalController extends Controller
             $testimonal = Testimonal::find($id);
             $testimonal->delete();
             return redirect('view')->with('message', 'Testimonal deleted successfully');
+         }
+
+         public function index()
+         {
+          $testimonal = Testimonal::all();
+          return view('admin.index', compact('testimonal'));
          }
 }

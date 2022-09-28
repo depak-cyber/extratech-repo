@@ -43,6 +43,9 @@
                           </td>
                         </tr>
                         @endforeach
+                        <span style="padding-top:50px;" >
+                            {!!$testimonal->withQueryString()->links('pagination::bootstrap-5') !!}
+                         </span>
                     </tbody>
                   </table>
             </div>
