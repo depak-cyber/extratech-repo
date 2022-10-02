@@ -10,10 +10,18 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
    <!--     Fonts and icons     -->
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     
+=======
+   <!--     Fonts and icons     -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+>>>>>>> 23f1cc3bffc68c03a325bb09bc929727c91fa871
     <!-- styles -->
     <link  href="{{asset('admin/css/bootstrap5.css')}}" rel='stylesheet'>
     <link  href="{{asset('admin/css/light-bootstrap-dashboard.css?v=2.0.0')}}" rel='stylesheet'>
@@ -40,6 +48,7 @@
 </div>
 
 <!-- Scripts -->
+<<<<<<< HEAD
 <script src="//code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
 <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="//cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js" type="text/javascript"></script>
@@ -52,5 +61,15 @@
    
    
     @yield('script')
+=======
+   <!-- Scripts -->
+   <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}" type="text/javascript"></script>
+
+   <script src="{{asset('admin/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script src="{{asset('admin/js/popper.min.js')}}" type="text/javascript"></script>
+   <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
+>>>>>>> 23f1cc3bffc68c03a325bb09bc929727c91fa871
 </body>
 </html>
