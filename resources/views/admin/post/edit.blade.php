@@ -1,5 +1,10 @@
 @extends('layouts.admin')
+<div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
 
+   
+  @include('layouts.inc.usidebar')
+
+</div>
 @section('content')
   <h1>Post</h1>
   <div class="wrapper">

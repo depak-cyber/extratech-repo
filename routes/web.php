@@ -20,10 +20,23 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Route::get('/', [App\Http\Controllers\User\UserController::class, 'index']);
+
+          
+        Route::get('admin/add-post', [App\Http\Controllers\Admin\PostController::class, 'create']);
+        Route::post('admin/add-post', [App\Http\Controllers\Admin\PostController::class, 'store']);
+        Route::get('admin/users',[App\Http\Controllers\Admin\UserController::class, 'index']);
+        Route::get('admin/users/{id}',[App\Http\Controllers\Admin\UserController::class, 'edit']);
+
+        Route::get('admin/posts',[App\Http\Controllers\Admin\PostController::class, 'index']);
+        Route::get('admin/approved/{id}', [App\Http\Controllers\Admin\PostController::class, 'approved']);
+        Route::get('admin/pending/{id}', [App\Http\Controllers\Admin\PostController::class, 'pending']);
+
+
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/users/profile', [App\Http\Controllers\User\UserController::class, 'profile'])->name('users.profile');
-
-
+Route::get('admin/index', [App\Http\Controllers\User\UserController::class, 'index']);
+Route::post('admin/index', [App\Http\Controllers\User\UserController::class, 'add_image']);
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     Route::get('/dashboard', function (){
@@ -32,15 +45,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
 
 
 
-        Route::get('posts',[App\Http\Controllers\Admin\PostController::class, 'index']);
-        Route::get('add-post', [App\Http\Controllers\Admin\PostController::class, 'create']);
-        Route::post('add-post', [App\Http\Controllers\Admin\PostController::class, 'store']);
+      
+
         Route::get('post/{id}', [App\Http\Controllers\Admin\PostController::class, 'edit']);
         Route::put('update-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'update']);
         Route::get('delete-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'destroy']);
-        Route::get('users',[App\Http\Controllers\Admin\UserController::class, 'index']);
-        Route::get('users/{id}',[App\Http\Controllers\Admin\UserController::class, 'edit']);
-
+      
 
 });
 

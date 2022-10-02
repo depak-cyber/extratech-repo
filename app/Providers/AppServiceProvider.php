@@ -28,9 +28,10 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         Paginator::useBootstrap();
 
-    // Schema::defaultStringLength(191);
-    $navItems = NavItem::where('status', 'Enabled')->get();
-
-    view()->share('navItems', $navItems);
+        Schema::defaultStringLength(191);
+        $navItems = NavItem::where('status', 'Enabled')->get();
+    
+        view()->share('navItems', $navItems);
+        
     }
 }

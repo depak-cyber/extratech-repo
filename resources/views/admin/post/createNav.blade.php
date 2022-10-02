@@ -10,7 +10,7 @@
                       @endforeach
                     </div>
                     @endif
-
+                    
                     <form action="{{route('navitem.store')}}" method="post">
                                         @csrf
                                             <div class="form-group">

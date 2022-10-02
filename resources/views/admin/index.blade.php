@@ -1,52 +1,227 @@
 @extends('layouts.admin')
 
+<div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
+
+   
+  @include('layouts.inc.usidebar')
+
+</div>
 @section('content')
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <figure class="text-center">
-            <blockquote class="blockquote">
-              <p>A well-known quote, contained in a blockquote element.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
-            </figcaption>
-          </figure>
+<div class="content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card ">
+                  <div class="card-header ">
+                      <h4 class="card-title">Email Statistics</h4>
+                      <p class="card-category">Last Campaign Performance</p>
+                  </div>
+                  <div class="card-body ">
+                      <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+                      <div class="legend">
+                          <i class="fa fa-circle text-info"></i> Open
+                          <i class="fa fa-circle text-danger"></i> Bounce
+                          <i class="fa fa-circle text-warning"></i> Unsubscribe
+                      </div>
+                      <hr>
+                      <div class="stats">
+                          <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-8">
+              <div class="card ">
+                  <div class="card-header ">
+                      <h4 class="card-title">Users Behavior</h4>
+                      <p class="card-category">24 Hours performance</p>
+                  </div>
+                  <div class="card-body ">
+                      <div id="chartHours" class="ct-chart"></div>
+                  </div>
+                  <div class="card-footer ">
+                      <div class="legend">
+                          <i class="fa fa-circle text-info"></i> Open
+                          <i class="fa fa-circle text-danger"></i> Click
+                          <i class="fa fa-circle text-warning"></i> Click Second Time
+                      </div>
+                      <hr>
+                      <div class="stats">
+                          <i class="fa fa-history"></i> Updated 3 minutes ago
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="carousel-item">
-        <figure class="text-center">
-            <blockquote class="blockquote">
-              <p>A well-known quote, contained in a blockquote element.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
-            </figcaption>
-          </figure>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="card ">
+                  <div class="card-header ">
+                      <h4 class="card-title">2017 Sales</h4>
+                      <p class="card-category">All products including Taxes</p>
+                  </div>
+                  <div class="card-body ">
+                      <div id="chartActivity" class="ct-chart"></div>
+                  </div>
+                  <div class="card-footer ">
+                      <div class="legend">
+                          <i class="fa fa-circle text-info"></i> Tesla Model S
+                          <i class="fa fa-circle text-danger"></i> BMW 5 Series
+                      </div>
+                      <hr>
+                      <div class="stats">
+                          <i class="fa fa-check"></i> Data information certified
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="card  card-tasks">
+                  <div class="card-header ">
+                      <h4 class="card-title">Tasks</h4>
+                      <p class="card-category">Backend development</p>
+                  </div>
+                  <div class="card-body ">
+                      <div class="table-full-width">
+                          <table class="table">
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="">
+                                                  <span class="form-check-sign"></span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                      <td class="td-actions text-right">
+                                          <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
+                                              <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
+                                              <i class="fa fa-times"></i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                                  <span class="form-check-sign"></span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                      <td class="td-actions text-right">
+                                          <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
+                                              <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
+                                              <i class="fa fa-times"></i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                                  <span class="form-check-sign"></span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                                      </td>
+                                      <td class="td-actions text-right">
+                                          <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
+                                              <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
+                                              <i class="fa fa-times"></i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" checked>
+                                                  <span class="form-check-sign"></span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                      <td class="td-actions text-right">
+                                          <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
+                                              <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
+                                              <i class="fa fa-times"></i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="">
+                                                  <span class="form-check-sign"></span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Read "Following makes Medium better"</td>
+                                      <td class="td-actions text-right">
+                                          <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
+                                              <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
+                                              <i class="fa fa-times"></i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <div class="form-check">
+                                              <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" value="" disabled>
+                                                  <span class="form-check-sign"></span>
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td>Unfollow 5 enemies from twitter</td>
+                                      <td class="td-actions text-right">
+                                          <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
+                                              <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
+                                              <i class="fa fa-times"></i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="card-footer ">
+                      <hr>
+                      <div class="stats">
+                          <i class="now-ui-icons loader_refresh spin"></i> Updated 3 minutes ago
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="carousel-item">
-        <figure class="text-center">
-            <blockquote class="blockquote">
-              <p>A well-known quote, contained in a blockquote element.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
-            </figcaption>
-          </figure>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
+</div>
+
+
+
+
+   
+
+
+
 @endsection

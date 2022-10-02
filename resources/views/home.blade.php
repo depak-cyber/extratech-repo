@@ -1,5 +1,11 @@
 @extends('layouts.admin')
+<div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
 
+   
+    @include('layouts.inc.sidebar')
+
+</div>
+     
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -26,4 +32,7 @@
         </div>
     </div>
 </div>
+
+
+
 @endsection

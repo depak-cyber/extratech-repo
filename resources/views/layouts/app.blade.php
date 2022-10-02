@@ -82,5 +82,9 @@
     <!-- Scripts -->
     <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-3.6.1.min.js')}}"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 </body>
 </html>
