@@ -38,8 +38,8 @@
                           </td>
                           <td>{{$item->status == '1' ? 'Visible':'Hidden'}}</td>
                           <td>
-                            <a href ="{{url('update-testimonals'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-pencil-square-o" aria-hidden="true"></i>  Edit</a>
-                            <a href ="{{url('delete-testimonals'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-trash" aria-hidden="true"></i>  Delete</a>
+                            <a href ="{{url('update-testimonals/'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-pencil-square-o" aria-hidden="true"></i>  Edit</a>
+                            <a href ="{{url('delete-testimonals/'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-trash" aria-hidden="true"></i>  Delete</a>
                           </td>
                         </tr>
                         @endforeach

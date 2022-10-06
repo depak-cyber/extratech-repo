@@ -7,9 +7,9 @@
 
       <ul class="nav-menu">
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        
+
         <ul class="navbar-nav ms-auto">
-          
+
             @foreach ($navItems as $item )
             @if (count($item->subnavigation)>0)
             <li class="nav-item dropdown">
@@ -25,10 +25,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">{{$item->name}}</a>
               </li>
-              
+
             @endif
             @endforeach
-            
+
         </ul>
       <div>
         @if (Route::has('login'))
@@ -36,8 +36,8 @@
         @auth
             <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
         @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-    
+            <a href="{{ route('login') }}" class="mr-5 text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+
             @if (Route::has('register'))
                 <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
             @endif
@@ -54,7 +54,7 @@
           @csrf
       </form>
     </div>
-    
+
       </div>
     </div>
   </nav>

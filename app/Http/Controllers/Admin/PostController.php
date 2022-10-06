@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Admin;
 use App\Models\Post;
 use App\Models\User;
-use App\Http\Controllers\Controller;
+use App\Models\Services;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Pagination\Paginator;
 
 
@@ -19,10 +20,10 @@ class PostController extends Controller
 
     public function index(){
 
-        
-        
-       
-        
+
+
+
+
         $posts= Post::all();
         $posts=Post::paginate(5);
 
@@ -38,10 +39,10 @@ class PostController extends Controller
          if(auth()->user()->role_as == '1'){
             return redirect()->back();
          }else{
-           
+
            return redirect()->back()->with('error', 'You are not admin');
          }
-          
+
 
     }
     public function pending($id){
@@ -52,7 +53,7 @@ class PostController extends Controller
         if(auth()->user()->role_as == '1'){
             return redirect()->back();
          }else{
-           
+
            return redirect()->back()->with('error', 'You are not admin');
          }
 
@@ -66,7 +67,7 @@ class PostController extends Controller
         $validate= $request->validate([
           'title'=>['required','string'],
           'articles'=>['required','string'],
-          
+
 
         ]);
         $post= new Post;
@@ -118,4 +119,5 @@ class PostController extends Controller
         return redirect('admin/posts')->with('message', 'Post deleted successfully');
 
     }
+
 }

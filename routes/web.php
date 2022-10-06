@@ -22,7 +22,7 @@ Auth::routes();
 
 //Route::get('/', [App\Http\Controllers\User\UserController::class, 'index']);
 
-          
+
         Route::get('admin/add-post', [App\Http\Controllers\Admin\PostController::class, 'create']);
         Route::post('admin/add-post', [App\Http\Controllers\Admin\PostController::class, 'store']);
         Route::get('admin/users',[App\Http\Controllers\Admin\UserController::class, 'index']);
@@ -45,12 +45,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
 
 
 
-      
+
 
         Route::get('post/{id}', [App\Http\Controllers\Admin\PostController::class, 'edit']);
         Route::put('update-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'update']);
         Route::get('delete-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'destroy']);
-      
+
 
 });
 
@@ -82,9 +82,18 @@ Route::get('testimonals/create', [App\Http\Controllers\TestimonalController::cla
 Route::get('index', [App\Http\Controllers\TestimonalController::class, 'index']);
 Route::get('view', [App\Http\Controllers\TestimonalController::class, 'view']);
 Route::get('delete-testimonals/{id}', [App\Http\Controllers\TestimonalController::class, 'destroy']);
-Route::post('update-testimonals/{id}', [App\Http\Controllers\TestimonalController::class, 'edit']);
+Route::get('update-testimonals/{id}', [App\Http\Controllers\TestimonalController::class, 'edit']);
 Route::post('testimonals/store', [App\Http\Controllers\TestimonalController::class, 'store']);
 //End of Testimonals
+
+//Services
+Route::get('services/create', [App\Http\Controllers\ServiceController::class, 'create']);
+Route::post('services/store', [App\Http\Controllers\ServiceController::class, 'store']);
+Route::get('index', [App\Http\Controllers\ServiceController::class, 'index']);
+Route::get('view', [App\Http\Controllers\ServiceController::class, 'view']);
+Route::get('delete-services/{id}', [App\Http\Controllers\ServiceController::class, 'destroy']);
+Route::get('update-services/{id}', [App\Http\Controllers\ServiceController::class, 'edit']);
+//End of Services
 
 //For Navbar pages
 Route::get('/contact', function (){
