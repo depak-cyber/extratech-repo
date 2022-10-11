@@ -49,7 +49,7 @@ class ServiceController extends Controller
          return view('admin.user.services', compact('services'));
         }
 
-        public function view()
+        public function viewService()
          {
           $services = Services::all();
           $services = Services::paginate(3);

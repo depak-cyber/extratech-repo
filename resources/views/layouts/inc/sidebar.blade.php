@@ -37,7 +37,7 @@
         </li>
         <li class="nav-item active">
 
-             <a class="nav-link"href="{{url('view')}}">View Services</a>
+             <a class="nav-link"href="{{url('viewService')}}">View Services</a>
         </li>
     </ul>
 </div>

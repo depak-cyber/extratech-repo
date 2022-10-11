@@ -1,60 +1,57 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container">
-      <a class="navbar-brand" href='{{url('admin/dashboard')}}' >EXTRATECH</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <ul class="nav-menu">
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+       <!-- header section starts -->
+       <header class="header_section">
+        <div class="container">
+           <nav class="navbar navbar-expand-lg custom_nav-container ">
+              <a class="navbar-brand" href="#"><img height="100"  width="100" src="/frontend/home/images/logo.png" alt="png" /></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav">
 
-        <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto">
 
-            @foreach ($navItems as $item )
-            @if (count($item->subnavigation)>0)
-            <li class="nav-item dropdown">
-                <a class="nav-link route dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{$item->name}}</a>
-                <div class="dropdown-menu dropdown-menu-end fade-down dropdown-academy" aria-labelledby="navbarDropdownMenuLink">
-                    @foreach ($item->subnavigation as $subnav)
-                        <a class="dropdown-item" href="">{{$subnav->name}} </a>
-                        <div class="dropdown-divider"></div>
-                    @endforeach
-               </div>
-            </li>
-            @else
-              <li class="nav-item">
-                <a class="nav-link" href="#">{{$item->name}}</a>
-              </li>
+                        @foreach ($navItems as $item )
+                        @if (count($item->subnavigation)>0)
+                        <li class="nav-item dropdown">
+                            <a class="nav-link route dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{$item->name}}</a>
+                            <div class="dropdown-menu dropdown-menu-end fade-down dropdown-academy" aria-labelledby="navbarDropdownMenuLink">
+                                @foreach ($item->subnavigation as $subnav)
+                                    <a class="dropdown-item" href="">{{$subnav->name}} </a>
+                                    <div class="dropdown-divider"></div>
+                                @endforeach
+                           </div>
+                        </li>
+                        @else
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">{{$item->name}}</a>
+                          </li>
+                        @endif
+                        @endforeach
+                    </ul>
 
-            @endif
-            @endforeach
+                     @guest
 
-        </ul>
-      <div>
-        @if (Route::has('login'))
-    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-        @auth
-            <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-        @else
-            <a href="{{ route('login') }}" class="mr-5 text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                     <li class="nav-item">
+                        <a class="btn btn-primary" id="logincss" href="{{url('login')}}">Login</a>
+                     </li>
 
-            @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-            @endif
-        @endauth
-    </div>
-    @endif
-      </div>
-        <div>
-        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-          {{ __('Logout') }}
-      </a>
+                     <li class="nav-item">
+                        <a class="btn  btn-success"  href="{{url('register')}}">Register Here</a>
+                     </li>
 
-      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-          @csrf
-      </form>
-    </div>
+                     @else
 
-      </div>
-    </div>
-  </nav>
+                     <li class="nav-item">
+                        <a class="btn  btn-outline-secondary nav-link" href="{{ url ('logout') }}">Logout</a>
+                     </li>
+
+                     @endguest
+
+                 </ul>
+              </div>
+           </nav>
+        </div>
+     </header>
+     <!-- end header section -->

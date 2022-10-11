@@ -14,9 +14,15 @@ use App\Https\Middleware\AdminMiddleware;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
+// Route::get('/', [UserController::class, 'index']);
+
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/', 'index')->name('login');
+    });
+
 
 Auth::routes();
 
@@ -90,7 +96,7 @@ Route::post('testimonals/store', [App\Http\Controllers\TestimonalController::cla
 Route::get('services/create', [App\Http\Controllers\ServiceController::class, 'create']);
 Route::post('services/store', [App\Http\Controllers\ServiceController::class, 'store']);
 Route::get('index', [App\Http\Controllers\ServiceController::class, 'index']);
-Route::get('view', [App\Http\Controllers\ServiceController::class, 'view']);
+Route::get('viewService', [App\Http\Controllers\ServiceController::class, 'viewService']);
 Route::get('delete-services/{id}', [App\Http\Controllers\ServiceController::class, 'destroy']);
 Route::get('update-services/{id}', [App\Http\Controllers\ServiceController::class, 'edit']);
 //End of Services
