@@ -27,7 +27,7 @@ class ServiceController extends Controller
           ]);
 
            $services= new Services;
-           $services->title=$validate['title'];
+           $services->name=$validate['name'];
            $services->description=$validate['description'];
            //$services->icon=$validate['icon'];
 
@@ -39,15 +39,14 @@ class ServiceController extends Controller
             ]);
 
             $request->file('icon')->store('admin/icons');
-            $services->image =$request->file('icon')->getClientOriginalName();
+            $services->icon =$request->file('icon')->getClientOriginalName();
            }
 
            $services->save();
 
            $services = Services::all();
-           $message = 'Services added successfully';
 
-         return view('admin.user.services', compact('services,  message'));
+         return view('admin.user.services', compact('services'));
         }
 
         public function view()
