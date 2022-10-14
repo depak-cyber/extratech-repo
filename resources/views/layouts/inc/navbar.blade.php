@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href='{{url('admin/dashboard')}}' >EXTRATECH</a>
+      <a class="navbar-brand" href='{{url('/admin/dashboard')}}' >EXTRATECH</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,12 +30,11 @@
             @endforeach
         </ul>
 
-
     <div>
         @if (Route::has('login'))
     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
         @auth
-            <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+           {{--  <a href="{{ url('/admin/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a> --}}
         @else
             <a href="{{ route('login') }}" class="mr-5 text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 

@@ -19,14 +19,14 @@ use App\Https\Middleware\AdminMiddleware;
 }); */
 // Route::get('/', [UserController::class, 'index']);
 
-Route::controller(HomeController::class)->group(function(){
-    Route::get('/', 'index')->name('login');
-    });
+        Route::controller(HomeController::class)->group(function(){
+            Route::get('/', 'index')->name('login');
+            });
 
 
-Auth::routes();
+        Auth::routes();
 
-//Route::get('/', [App\Http\Controllers\User\UserController::class, 'index']);
+        //Route::get('/', [App\Http\Controllers\User\UserController::class, 'index']);
 
 
         Route::get('admin/add-post', [App\Http\Controllers\Admin\PostController::class, 'create']);
@@ -39,15 +39,15 @@ Auth::routes();
         Route::get('admin/pending/{id}', [App\Http\Controllers\Admin\PostController::class, 'pending']);
 
 
-Route::get('home', [App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/users/profile', [App\Http\Controllers\User\UserController::class, 'profile'])->name('users.profile');
-Route::get('admin/index', [App\Http\Controllers\User\UserController::class, 'index']);
-Route::post('admin/index', [App\Http\Controllers\User\UserController::class, 'add_image']);
+        Route::get('home', [App\Http\Controllers\HomeController::class, 'index']);
+        Route::get('/users/profile', [App\Http\Controllers\User\UserController::class, 'profile'])->name('users.profile');
+        Route::get('admin/index', [App\Http\Controllers\User\UserController::class, 'index']);
+        Route::post('admin/index', [App\Http\Controllers\User\UserController::class, 'add_image']);
 
-Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
-    Route::get('/dashboard', function (){
-        return view('admin.index');
-   });
+        Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
+            Route::get('/dashboard', function (){
+                return view('admin.index');
+        });
 
 
 
@@ -58,51 +58,64 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('delete-post/{id}', [App\Http\Controllers\Admin\PostController::class, 'destroy']);
 
 
-});
+        });
 
-// For Navbar
-Route::get('/navitem/create',[
-    'uses'=>'NavItemController@create',
-    'as' =>'navitem.create',
-]);
+        // For Navbar
+        Route::get('/navitem/create',[
+            'uses'=>'NavItemController@create',
+            'as' =>'navitem.create',
+        ]);
 
-Route::post('/navitem/store',[
-    'uses'=>'NavItemController@store',
-    'as' =>'navitem.store',
-]);
+        Route::post('/navitem/store',[
+            'uses'=>'NavItemController@store',
+            'as' =>'navitem.store',
+        ]);
 
-//for sub..
-Route::get('/subnavitem/create',[
-    'uses'=>'SubNavItemsController@create',
-    'as' =>'subnavitem.create',
-]);
+        //for sub..
+        Route::get('/subnavitem/create',[
+            'uses'=>'SubNavItemsController@create',
+            'as' =>'subnavitem.create',
+        ]);
 
-Route::post('/subnavitem/store',[
-    'uses'=>'SubNavItemsController@store',
-    'as' =>'subnavitem.store',
-]);
-//End of Navbar
+        Route::post('/subnavitem/store',[
+            'uses'=>'SubNavItemsController@store',
+            'as' =>'subnavitem.store',
+        ]);
+        //End of Navbar
 
-//Testimonals
-Route::get('testimonals/create', [App\Http\Controllers\TestimonalController::class, 'create']);
-Route::get('index', [App\Http\Controllers\TestimonalController::class, 'index']);
-Route::get('view', [App\Http\Controllers\TestimonalController::class, 'view']);
-Route::get('delete-testimonals/{id}', [App\Http\Controllers\TestimonalController::class, 'destroy']);
-Route::get('update-testimonals/{id}', [App\Http\Controllers\TestimonalController::class, 'edit']);
-Route::post('testimonals/store', [App\Http\Controllers\TestimonalController::class, 'store']);
-//End of Testimonals
+        //Testimonals
+        Route::get('testimonals/create', [App\Http\Controllers\TestimonalController::class, 'create']);
+        Route::get('index', [App\Http\Controllers\TestimonalController::class, 'index']);
+        Route::get('view', [App\Http\Controllers\TestimonalController::class, 'view']);
+        Route::get('delete-testimonals/{id}', [App\Http\Controllers\TestimonalController::class, 'destroy']);
+        Route::get('/edit-testimonals{id}', [App\Http\Controllers\TestimonalController::class, 'edit']);
+        Route::post('/updateTestimonal{id}', [App\Http\Controllers\TestimonalController::class, 'updateData']);
+        Route::post('testimonals/store', [App\Http\Controllers\TestimonalController::class, 'store']);
+        //End of Testimonals
 
-//Services
-Route::get('services/create', [App\Http\Controllers\ServiceController::class, 'create']);
-Route::post('services/store', [App\Http\Controllers\ServiceController::class, 'store']);
-Route::get('index', [App\Http\Controllers\ServiceController::class, 'index']);
-Route::get('viewService', [App\Http\Controllers\ServiceController::class, 'viewService']);
-Route::get('delete-services/{id}', [App\Http\Controllers\ServiceController::class, 'destroy']);
-Route::get('update-services/{id}', [App\Http\Controllers\ServiceController::class, 'edit']);
-//End of Services
+        //Services
+        Route::get('services/create', [App\Http\Controllers\ServiceController::class, 'create']);
+        Route::post('services/store', [App\Http\Controllers\ServiceController::class, 'store']);
+        Route::get('index', [App\Http\Controllers\ServiceController::class, 'index']);
+        Route::get('viewService', [App\Http\Controllers\ServiceController::class, 'viewService']);
+        Route::get('delete-services/{id}', [App\Http\Controllers\ServiceController::class, 'destroy']);
+        Route::get('update-services/{id}', [App\Http\Controllers\ServiceController::class, 'edit']);
+        //End of Services
 
-//For Navbar pages
-Route::get('/contact', function (){
-return view ('contact');
-});
-//End For Navbar pages
+        //For Sliders
+        Route::get('sliders/create', [App\Http\Controllers\SlidersController::class, 'create']);
+        Route::post('sliders/store', [App\Http\Controllers\SlidersController::class, 'store']);
+        Route::get('index', [App\Http\Controllers\SlidersController::class, 'index']);
+        Route::get('viewSlider', [App\Http\Controllers\SlidersController::class, 'viewSlider']);
+        Route::get('delete-sliders/{id}', [App\Http\Controllers\SlidersController::class, 'delete_sliders']);
+        Route::get('edit-sliders/{id}', [App\Http\Controllers\SlidersController::class, 'edit']);
+        Route::put('update-sliders/{id}', [App\Http\Controllers\SlidersController::class, 'update']);
+        //End for Sliders
+
+
+
+        //For Navbar pages
+        Route::get('/contact', function (){
+        return view ('contact');
+        });
+        //End For Navbar pages

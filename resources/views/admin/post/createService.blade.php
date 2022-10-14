@@ -10,13 +10,13 @@
                       @endforeach
                     </div>
                     @endif
-                    <a href='{{url('view')}}' class="btn btn-primary float-right mb-3"><i class= "fa fa-eye" aria-hidden="true"></i> View services</a>
+                    <a href='{{url('viewService')}}' class="btn btn-primary float-right mb-3"><i class= "fa fa-eye" aria-hidden="true"></i> View services</a>
 
                     <form action="{{url('services/store')}}" method="post" enctype="multipart/form-data">
                                         @csrf
                                             <div class="form-group">
                                                 <label for="icon">Icon</label>
-                                                <input class="form-control" name = "icon" id="icon" type="file" placeholder="Icon" /> <br>
+                                                <input class="form-control" name ="icon" id="icon" type="file" placeholder="Icon" /> <br>
                                             </div>
                                             <div class="form-group">
                                                 <label for="name">Name</label>
@@ -24,7 +24,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="description">Description</label>
-                                                <textarea name="description" class="form-control" rows="3"> </textarea> <br>
+                                                <input class="form-control" type="text" name="description" id="description" placeholder="Enter Service Description" /><br>
                                             </div>
                                             <div class="card-footer">
                                                 <button class="btn btn-primary" type="submit"> Save </button>

@@ -5,15 +5,16 @@
               <h2>
                  Our Services
               </h2>
-              <div class="text-center"><p> Concise amalgamation of business & technology is of utmost importance for success of any business, and we understand this better than most.</p></div>
+              <div class="text-center"><p> Concise amalgamation of business & technology is of utmost importance for success of any business, and we understand this better than most.</p></div><br>
            </div>
            <div class="row">
 
             @foreach ($services as $service)
+
               <div class="col-md-4">
                  <div>
                     <div class="img-box">
-                     <img src="/admin/icons/{{$service->icon}}" alt="srvtimg">
+                     <img src="/admin/icons/{{$service->icon}}" width="80" height="80" alt="srvtimg" class="img img-responsive">
                     </div>
                     <div>
                        <h5>

@@ -10,20 +10,20 @@
                       @endforeach
                     </div>
                     @endif
-                    
+
                     <form action="{{route('navitem.store')}}" method="post">
                                         @csrf
                                             <div class="form-group">
                                                 <label for="navbar_name">Name</label>
                                                 <input class="form-control" name = "navbar_name" id="navbar_name" type="text" placeholder="Name" />
-                                            </div>
+                                            </div><br>
                                             <div class="form-group">
                                                 <label for="status">Status</label>
                                                 <select class="form-control" name="status" id="status" required>
                                                     <option>Enabled</option>
                                                     <option>Disabled</option>
                                                 </select>
-                                            </div>
+                                            </div> <br>
                                             <div class="card-footer">
                                                 <button type="submit" class="btn btn-primary"> Add Navbar Name </button>
                                             </div>

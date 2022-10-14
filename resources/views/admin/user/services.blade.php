@@ -5,15 +5,12 @@
              <h3 class="text-center font-weight-light my-4">View Services</h3></div>
              <div class="card-body">
 
-                 @if($errors->any())
-                     <div class='alert alert-danger'>
-                       @foreach ($errors->all() as $error)
-                           <div>{{$error}}</div>
-                       @endforeach
-                     </div>
-                 @endif
+                @if(session('message'))
+                <div class='alert alert-success'>{{ session('message')}}</div>
+                @endif
+
                  <a href='{{url('services/create')}}' class="btn btn-primary float-right mb-3"><i class= "fa fa-pencil-square-o" aria-hidden="true"></i> Add Services</a>
-                 <table class="table table-bordered">
+                 <table id='servicetbl' class="table table-bordered">
                      <thead>
                        <tr>
                          <th>ID</th>
@@ -41,13 +38,18 @@
                            </td>
                          </tr>
                          @endforeach
-                         <span style="padding-top:50px;" >
-                             {!!$services->withQueryString()->links('pagination::bootstrap-5') !!}
-                          </span>
                      </tbody>
                    </table>
              </div>
          </div>
  @endsection
+ @section('script')
+<script>
+
+  $(document).ready(function () {
+      $('#servicetbl').DataTable();
+  });
+    </script>
+    @endsection
 
 

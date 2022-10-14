@@ -16,7 +16,7 @@
                                             <div class="form-group">
                                                 <label for="subnavbar_name">Dropdown Name</label>
                                                 <input class="form-control" name = "subnavbar_name" type="text" placeholder="DropdownName" />
-                                            </div>
+                                            </div><br>
 
                                             <div class="form-group">
                                                 <label for="navbar_name">Select Main Navigation Item</label>
@@ -25,7 +25,7 @@
                                                     <option value="{{$item->id}}"> {{$item->name}}</option>
                                                     @endforeach
                                                 </select>
-                                            </div>
+                                            </div><br>
 
                                             <div class="form-group">
                                                 <label for="status">Status</label>
@@ -33,7 +33,7 @@
                                                     <option value="enabled" >Enabled</option>
                                                     <option value="disabled" >Disabled</option>
                                                 </select>
-                                            </div>
+                                            </div> <br>
 
                                             <div class="card-footer">
                                                 <button type="submit" class="btn btn-primary"> Add Dropdown Name </button>

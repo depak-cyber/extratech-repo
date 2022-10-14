@@ -82,15 +82,9 @@
     <!-- Scripts -->
     <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-3.6.1.min.js')}}"></script>
-<<<<<<< HEAD
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'article-ckeditor' );
     </script>
-=======
-    <script src="{{asset('admin/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('admin/js/popper.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('admin/js/bootstrap.min.js')}}" type="text/javascript"></script>
->>>>>>> 23f1cc3bffc68c03a325bb09bc929727c91fa871
 </body>
 </html>

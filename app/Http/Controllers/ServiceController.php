@@ -11,7 +11,7 @@ class ServiceController extends Controller
     public function index()
     {
      $services = Services::all();
-     return view('admin.index', compact('Services'));
+     return view('admin.index', compact('services'));
     }
 
     public function create()
@@ -46,14 +46,15 @@ class ServiceController extends Controller
 
            $services = Services::all();
 
-         return view('admin.user.services', compact('services'));
+         return view('admin.user.services', compact('services','services'));
         }
+
 
         public function viewService()
          {
           $services = Services::all();
           $services = Services::paginate(3);
-          return view('admin.user.services', compact('services'));
+          return view('admin.user.services', compact('services','services'));
          }
 
 
@@ -67,7 +68,7 @@ class ServiceController extends Controller
           {
             $services = Services::find($id);
             $services->delete();
-            return redirect('view')->with('message', 'Services deleted successfully');
+            return redirect('viewService')->with('message', 'Services deleted successfully');
          }
 
 
