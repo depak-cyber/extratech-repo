@@ -62,53 +62,53 @@ class SlidersController extends Controller
 
 
     public function edit($id)
-    {
-        return view('admin.post.editSliders', compact('id'));
+         {
+            # return $id;
+            $sliders = Slider::where('id', $id)->get();
+            # return $sliders;
+            return view('admin.post.updateSliders', ['cd'=>$sliders]);
+         }
 
-    }
+         public function updateSlidersData(Request $request)
+         {
+                $id= $request->id;
+                $heading = $request->input('heading');
+                $subheading = $request->input('subheading');
+                $paragraph = $request->input('paragraph');
+               // $image = $request->input('image');
+                $status = $request->input('status');
 
+                if ($request->hasFile('image')) {
 
-    public function update(Request $request ,Slider $slider)
+                    $request->validate([
+                        'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
+                    ]);
+
+                    $request->file('image')->store('frontend/images');
+                    $image =$request->file('image')->getClientOriginalName();
+                   }
+
+                // return dd($image); checking that image is coming or not
+
+                $updateSuccess = Slider::where('id', $id)->update([
+                    'heading'=>$heading,
+                    'subheading'=>$subheading,
+                    'image'=>$image,
+                    'status'=>$status,
+                    ]);
+
+            #when update is successful then it will return given message
+            if($updateSuccess)
+            return redirect('viewSlider')->with('message', 'Sliders updated successfully');
+           //echo "<h3>Sliders updated successfully !!</h3>";
+            else
+            echo "<h3>Sliders updated failed, please try again!!</h3>";
+         }
+
+        public function delete_sliders($id)
         {
-            $validate= $request->validate([
-                'heading'=>['string'],
-                'subheading'=>['string'],
-                'paragraph'=>['string'],
-                'status'=>['string'],
-            ]);
-
-            $sliders= new Slider;
-            $sliders->heading=$validate['heading'];
-            $sliders->subheading=$validate['subheading'];
-            $sliders->paragraph=$validate['paragraph'];
-            $sliders->status=$request->status == true ? '1':'0';
-
-            if ($request->hasFile('image')) {
-
-                $request->validate([
-                    'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
-                ]);
-
-
-                $destination = $slider->image;
-                if (File::exists($destination))
-                {
-                    File::delete($destination);
-                }
-
-                $request->file('image')->store('frontend/images');
-                $sliders->image =$request->file('image')->getClientOriginalName();
-            }
-
-            $sliders->update();
-
-            return view('admin.user.sliders')->with('message', 'Sliders updated successfully');
+            $sliders = Slider::find($id);
+            $sliders->delete();
+            return redirect('viewSlider')->with('message', 'Sliders deleted successfully');
         }
-
-    public function delete_sliders($id)
-    {
-        $sliders = Slider::find($id);
-        $sliders->delete();
-        return redirect('view')->with('message', 'Sliders deleted successfully');
-    }
 }

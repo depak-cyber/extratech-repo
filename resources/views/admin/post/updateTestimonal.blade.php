@@ -24,11 +24,11 @@
                                             <div class="form-group">
                                                 <label for="image">Image</label>
                                                 <input class="form-control" name = "image" id="image" type="file" placeholder="Image"  /> <br>
-                                                <img src="{{asset($cd[0]->image)}}">
+                                                <img src="/admin/images/{{$cd[0]->image}}" width='50' height= '50'/>
                                             </div>
                                             <div class="form-group">
                                                 <label>Status</label>
-                                                <input type="checkbox" name="status" {{$cd[0]->status=='1' ? 'Hidden': ''}}  id="status" style="width:30px;height:30px;display:block;" /><br>
+                                                <input type="checkbox" name="status" value="{{$cd[0]->status}}"  id="status" style="width:30px;height:30px;display:block;" /><br>
                                             </div>
                                             <div class="card-footer">
                                                 <button class="btn btn-primary" type="submit"> Save </button>

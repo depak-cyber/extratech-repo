@@ -33,7 +33,7 @@
                            <td>{{$item->name}}</td>
                            <td>{{$item->description}}</td>
                            <td>
-                             <a href ="{{url('update-services/'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-pencil-square-o" aria-hidden="true"></i>  Edit</a>
+                             <a href ="{{url('/edit-services'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-pencil-square-o" aria-hidden="true"></i>  Edit</a>
                              <a href ="{{url('delete-services/'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-trash" aria-hidden="true"></i>  Delete</a>
                            </td>
                          </tr>

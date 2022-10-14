@@ -17,7 +17,7 @@ class Testimonal extends Model
         'title',
         'description',
         'image',
-        'status'
+        'status',
     ];
 
 }

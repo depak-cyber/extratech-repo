@@ -98,8 +98,9 @@ use App\Https\Middleware\AdminMiddleware;
         Route::post('services/store', [App\Http\Controllers\ServiceController::class, 'store']);
         Route::get('index', [App\Http\Controllers\ServiceController::class, 'index']);
         Route::get('viewService', [App\Http\Controllers\ServiceController::class, 'viewService']);
+        Route::get('/edit-services{id}', [App\Http\Controllers\ServiceController::class, 'edit']);
+        Route::post('/updateServices{id}', [App\Http\Controllers\ServiceController::class, 'updateServicesData']);
         Route::get('delete-services/{id}', [App\Http\Controllers\ServiceController::class, 'destroy']);
-        Route::get('update-services/{id}', [App\Http\Controllers\ServiceController::class, 'edit']);
         //End of Services
 
         //For Sliders
@@ -108,8 +109,8 @@ use App\Https\Middleware\AdminMiddleware;
         Route::get('index', [App\Http\Controllers\SlidersController::class, 'index']);
         Route::get('viewSlider', [App\Http\Controllers\SlidersController::class, 'viewSlider']);
         Route::get('delete-sliders/{id}', [App\Http\Controllers\SlidersController::class, 'delete_sliders']);
-        Route::get('edit-sliders/{id}', [App\Http\Controllers\SlidersController::class, 'edit']);
-        Route::put('update-sliders/{id}', [App\Http\Controllers\SlidersController::class, 'update']);
+        Route::get('/edit-sliders{id}', [App\Http\Controllers\SlidersController::class, 'edit']);
+        Route::post('/updateSliders{id}', [App\Http\Controllers\SlidersController::class, 'updateSlidersData']);
         //End for Sliders
 
 

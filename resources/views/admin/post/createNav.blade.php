@@ -1,15 +1,14 @@
 @extends('layouts.admin')
 @section('content')
             <div class="card-header"><h3 class="text-center font-weight-light my-4">Navbar Name</h3></div>
-                <div class="card-body">
 
-                    @if($errors->any())
-                    <div class='alert alert-danger'>
-                      @foreach ($errors->all() as $error)
-                          <div>{{$error}}</div>
-                      @endforeach
-                    </div>
-                    @endif
+            <div class="card-body">
+                @if(session('message'))
+                <div class='alert alert-success'>{{ session('message')}}</div>
+                @endif
+                @if(session('error'))
+                <div class='alert alert-danger'>{{ session('error')}}</div>
+                @endif
 
                     <form action="{{route('navitem.store')}}" method="post">
                                         @csrf

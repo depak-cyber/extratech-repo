@@ -53,16 +53,52 @@ class ServiceController extends Controller
         public function viewService()
          {
           $services = Services::all();
-          $services = Services::paginate(3);
+          $services = Services::paginate(6);
           return view('admin.user.services', compact('services','services'));
          }
 
 
          public function edit($id)
          {
-            $services = Services::find($id);
-            return view('admin.post.createService',compact('services'));
+            # return $id;
+            $services = Services::where('id', $id)->get();
+            # return $services;
+            return view('admin.post.updateServices', ['cd'=>$services]);
          }
+
+         public function updateServicesData(Request $request)
+         {
+                $id= $request->id;
+                $icon = $request->input('icon');
+                $name = $request->input('name');
+                $description = $request->input('description');
+
+                if ($request->hasFile('icon')) {
+
+                    $request->validate([
+                        'icon' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
+                    ]);
+
+                    $request->file('icon')->store('admin/icons');
+                    $icon =$request->file('icon')->getClientOriginalName();
+                   }
+
+                // return dd($icon); checking that icon is coming or not
+
+                $updateSuccess = Services::where('id', $id)->update([
+                    'icon'=>$icon,
+                    'name'=>$name,
+                    'description'=>$description,
+                    ]);
+
+            #when update is successful then it will return given message
+            if($updateSuccess)
+            return redirect('viewService')->with('message', 'Services updated successfully');
+           //echo "<h3>Services updated successfully !!</h3>";
+            else
+            echo "<h3>Services updated failed, please try again!!</h3>";
+         }
+
 
          public function destroy($id)
           {

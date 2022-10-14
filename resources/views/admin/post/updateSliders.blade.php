@@ -1,40 +1,39 @@
 @extends('layouts.admin')
 @section('content')
             <div class="card-header"><h3 class="text-center font-weight-light my-4 mb-3">Edit Sliders</h3></div>
+
                 <div class="card-body">
+                @if(session('message'))
+                <div class='alert alert-success'>{{ session('message')}}</div>
+                @endif
+                @if(session('error'))
+                <div class='alert alert-danger'>{{ session('error')}}</div>
+                @endif
 
-                    @if($errors->any())
-                    <div class='alert alert-danger'>
-                      @foreach ($errors->all() as $error)
-                          <div>{{$error}}</div>
-                      @endforeach
-                    </div>
-                    @endif
-                    <a href='{{url('view')}}' class="btn btn-primary float-right mb-3"><i class= "fa fa-eye" aria-hidden="true"></i> View Sliders</a>
+                    <a href='{{url('viewSlider')}}' class="btn btn-primary float-right mb-3"><i class= "fa fa-eye" aria-hidden="true"></i> View Sliders</a>
 
-                    <form action="{{url('update-sliders/'.$slider->id)}}" method="post" enctype="multipart/form-data">
+                    <form action="updateSliders{{$cd[0]->id}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        @method('PUT')
                                             <div class="form-group">
                                                 <label for="image">Image</label>
                                                 <input class="form-control" name ="image" id="image" type="file" placeholder="Image" /> <br>
-                                                <img src="{{asset($slider->image)}}">
+                                                <img src="/frontend/images/{{$cd[0]->image}}" width='50' height= '50'/>
                                             </div>
                                             <div class="form-group">
                                                 <label for="heading">Heading</label>
-                                                <input class="form-control" name = "heading" id="heading" type="text" placeholder="Heading"  /> <br>
+                                                <input class="form-control" name = "heading" id="heading" type="text" placeholder="Heading" value="{{$cd[0]->heading}}" /> <br>
                                             </div>
                                             <div class="form-group">
                                                 <label for="subheading">Sub-Heading</label>
-                                                <input class="form-control" name = "subheading" id="subheading" type="text" placeholder="Sub-Heading" /> <br>
+                                                <input class="form-control" name = "subheading" id="subheading" type="text" placeholder="Sub-Heading" value="{{$cd[0]->subheading}}" /> <br>
                                             </div>
                                             <div class="form-group">
                                                 <label for="paragraph">Paragraph</label>
-                                                <input class="form-control" type="text" name="paragraph" id="paragraph" placeholder="Paragraph" ><br>
+                                                <input class="form-control" type="text" name="paragraph" id="paragraph" placeholder="Paragraph" value="{{$cd[0]->paragraph}}" /><br>
                                             </div>
                                             <div class="form-group">
                                                 <label>Status</label>
-                                                <input type="checkbox" name="status" {{$slider->status=='1' ? 'Enable': ''}} id="status" style="width:30px;height:30px;display:block;" ><br>
+                                                <input type="checkbox" name="status" value="{{$cd[0]->status}}" id="status" style="width:30px;height:30px;display:block;" ><br>
                                             </div>
                                             <div class="card-footer">
                                                 <button class="btn btn-primary" type="submit"> Update </button>

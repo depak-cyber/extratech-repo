@@ -30,7 +30,7 @@
                           <td>
                             {{--if the image is coming then we are going to show image otherwise we are not going to show the images--}}
                             @if (!empty($item['image']))
-                            <img src="{{asset ('admin/images/'. $item['image']) }}" width='50' height= '50' class="img img-responsive">
+                            <img src="{{asset ('/admin/images/'. $item['image']) }}" width='50' height= '50' class="img img-responsive">
                             @endif
                           </td>
                           <td>{{$item->status == '1' ? 'Visible':'Hidden'}}</td>

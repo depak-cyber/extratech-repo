@@ -54,14 +54,6 @@ class TestimonalController extends Controller
           return view('admin.user.testimonals', compact('testimonal'));
          }
 
-
-         public function destroy($id)
-          {
-            $testimonal = Testimonal::find($id);
-            $testimonal->delete();
-            return redirect('view')->with('message', 'Testimonal deleted successfully');
-         }
-
          public function index()
          {
           $testimonal = Testimonal::all();
@@ -76,9 +68,46 @@ class TestimonalController extends Controller
             return view('admin.post.updateTestimonal', ['cd'=>$testimonal]);
          }
 
-         public function updateData($id)
+         public function updateData(Request $request)
          {
-            # return $id;
+                $id= $request->id;
+                $title = $request->input('title');
+                $description = $request->input('description');
+               // $image = $request->input('image');
+                $status = $request->input('status');
+
+                if ($request->hasFile('image')) {
+
+                    $request->validate([
+                        'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
+                    ]);
+
+                    $request->file('image')->store('admin/images');
+                    $image =$request->file('image')->getClientOriginalName();
+                   }
+
+                // return dd($image); checking that image is coming or not
+
+                $updateSuccess = Testimonal::where('id', $id)->update([
+                    'title'=>$title,
+                    'description'=>$description,
+                    'image'=>$image,
+                    'status'=>$status,
+                    ]);
+
+            #when update is successful then it will return given message
+            if($updateSuccess)
+            return redirect('view')->with('message', 'Testimonal updated successfully');
+           //echo "<h3>Testimnoals updated successfully !!</h3>";
+            else
+            echo "<h3>Testimnoals updated failed, please try again!!</h3>";
          }
 
+
+         public function destroy($id)
+          {
+            $testimonal = Testimonal::find($id);
+            $testimonal->delete();
+            return redirect('view')->with('message', 'Testimonal deleted successfully');
+         }
 }
