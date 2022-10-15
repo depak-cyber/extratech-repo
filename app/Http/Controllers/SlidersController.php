@@ -11,14 +11,16 @@ class SlidersController extends Controller
 
     public function index()
     {
-    # $sliders = Slider::where('status', '1')->get();
-    return view('admin.index');
+   // $sliders = Slider::all();
+    $sliders = Slider::where('status', '0')->get(); //when slider is 0 then only it should be visible
+    return view('welcome', compact('sliders'));
     }
 
     public function create()
    {
+    $sliders = Slider::all();
     $title="Add Sliders";
-    return view('admin.post.createSliders', compact('title'));
+    return view('admin.post.createSliders', compact('title','sliders'));
    }
 
    public function viewSlider()
@@ -57,7 +59,7 @@ class SlidersController extends Controller
 
         $sliders = Slider::all();
 
-        return view('admin.user.sliders', compact('sliders'));
+        return view('admin.user.sliders', compact('sliders','sliders'));
     }
 
 

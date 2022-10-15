@@ -1,14 +1,17 @@
 
        <!-- header section starts -->
-       <header class="header_section">
+       <header
+       class="text-center text-lg-start"
+       style="background-color: #4D24AA" >
+
         <div class="container">
            <nav class="navbar navbar-expand-lg custom_nav-container ">
-              <a class="navbar-brand" href="#"><img height="100"  width="100" src="/frontend/home/images/logo.png" alt="png" /></a>
+              <a class="navbar-brand" href="#"><img src="/frontend/home/images/flogo.png" alt="png" /></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                 <ul class="navbar-nav">
+              <div class="text-white collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav ">
 
                     <ul class="navbar-nav ms-auto">
 
@@ -55,3 +58,9 @@
         </div>
      </header>
      <!-- end header section -->
+
+
+
+
+
+
