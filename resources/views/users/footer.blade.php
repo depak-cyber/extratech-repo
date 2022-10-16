@@ -181,5 +181,19 @@
 </div>
 <!-- Grid container -->
 </footer>
-<!-- Footer -->
- <!-- footer end -->
+<!-- Top Footer end -->
+
+<!-- Bottom Footer -->
+ <div class="botttom-footer text-center p-3" style="background-color: #8d2086" >
+ <div class = "row footer-text">
+    <p class = "col-md-3 text-white" >ABN Number: 12734349838 </p>
+    <p class = "col-md-3 text-white" >Extratech © 2021. All Rights Reserved.</p>
+    <p class = "col-md-3 text-white" >
+        <a> Disclaimer</a>
+        <a> Privacy Policy</a>
+        <a> Feedback & Complaints</a>
+    </p>
+    <p class = "col-md-3 text-white" >Designed & Developed By: Debu & Deepak</p>
+ </div>
+ </div>
+<!-- Bottom Footer end -->

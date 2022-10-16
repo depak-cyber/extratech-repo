@@ -48,13 +48,6 @@
 
       @include('users.footer')
 
-      <div class="cpy_ text-center text-white"
-         style="background-color: #7132C3" >
-         <p class="mx-auto">© 2021 All Rights Reserved By ET</p>
-      </div>
-      <div></div>
-
-
       <!-- jQery -->
       <!-- JavaScript Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
