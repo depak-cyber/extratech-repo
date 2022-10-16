@@ -25,19 +25,34 @@
  <hr class="w-100 clearfix d-md-none" />
 
  <!-- Grid column -->
- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-   <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+ <div class="col-lg-3 col-md-6 mb-4 footer-links">
+   <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6><hr>
    <p>
-     <a class="text-white">MDBootstrap</a>
+     <a class="text-white">Digital Marketing</a>
    </p>
    <p>
-     <a class="text-white">MDWordPress</a>
+    <a class="text-white">Search Engine Optimization</a>
    </p>
    <p>
-     <a class="text-white">BrandFlow</a>
+     <a class="text-white">Social Media Marketing</a>
    </p>
    <p>
-     <a class="text-white">Bootstrap Angular</a>
+     <a class="text-white">Cloud Computing Services</a>
+   </p>
+   <p>
+    <a class="text-white">Office 365</a>
+   </p>
+   <p>
+    <a class="text-white">Web Design</a>
+   </p>
+   <p>
+    <a class="text-white">Office Set-up</a>
+   </p>
+   <p>
+    <a class="text-white">Custom Software Development</a>
+   </p>
+   <p>
+    <a class="text-white">Mobile App Development</a>
    </p>
  </div>
  <!-- Grid column -->
@@ -45,35 +60,68 @@
  <hr class="w-100 clearfix d-md-none" />
 
  <!-- Grid column -->
- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-   <h6 class="text-uppercase mb-4 font-weight-bold">
-     Useful links
-   </h6>
-   <p>
-     <a class="text-white">Your Account</a>
-   </p>
-   <p>
-     <a class="text-white">Become an Affiliate</a>
-   </p>
-   <p>
-     <a class="text-white">Shipping Rates</a>
-   </p>
-   <p>
-     <a class="text-white">Help</a>
-   </p>
- </div>
-
+ <!-- Grid column -->
+ <div class="col-lg-3 col-md-6 mb-4 footer-links">
+    <h6 class="text-uppercase mb-4 font-weight-bold">Academy</h6><hr>
+    <p>
+      <a class="text-white">Network & System Support</a>
+    </p>
+    <p>
+     <a class="text-white">Data Analytics</a>
+    </p>
+    <p>
+      <a class="text-white">Web Development (PHP Laravel)</a>
+    </p>
+    <p>
+      <a class="text-white">Web Development (Python Django)</a>
+    </p>
+    <p>
+     <a class="text-white">Career Counselling</a>
+    </p>
+    <p>
+     <a class="text-white">Digital Marketing</a>
+    </p>
+    <p>
+     <a class="text-white">Accounting</a>
+    </p>
+    <p>
+     <a class="text-white">Advance Network Engineering</a>
+    </p>
+    <p>
+     <a class="text-white">Advance System Engineering</a>
+    </p>
+  </div>
+  <!-- Grid column -->
  <!-- Grid column -->
  <hr class="w-100 clearfix d-md-none" />
 
  <!-- Grid column -->
- <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-   <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-   <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-   <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-   <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-   <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
- </div>
+  <!-- Grid column -->
+ <div class="col-lg-3 col-md-6 mb-4 footer-links">
+    <h6 class="text-uppercase mb-4 font-weight-bold">Company</h6><hr>
+    <p>
+      <a class="text-white">Home </a>
+    </p>
+    <p>
+     <a class="text-white">About us</a>
+    </p>
+    <p>
+      <a class="text-white">Teams</a>
+    </p>
+    <p>
+      <a class="text-white">Careers</a>
+    </p>
+    <p>
+     <a class="text-white">Blog</a>
+    </p>
+    <p>
+     <a class="text-white">Contact</a>
+    </p>
+    <p>
+     <a class="text-white">FAQs</a>
+    </p>
+  </div>
+  <!-- Grid column -->
  <!-- Grid column -->
 </div>
 <!--Grid row-->
@@ -84,6 +132,7 @@
 
 <!-- Section: Copyright -->
 <section class="p-3 pt-0">
+
 <div class="row d-flex align-items-center">
  <!-- Grid column -->
  <div class="col-md-7 col-lg-8 text-center text-md-start">
@@ -92,9 +141,10 @@
 
  <!-- Grid column -->
  <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+    <p style="font-weight:bold;">Join Our Social Community</p><hr>
    <!-- Facebook -->
    <a
-      class="btn btn-outline-light btn-floating m-1"
+      class="btn btn-floating m-1"
       class="text-white"
       role="button"
       ><i class="fa fa-facebook-f"></i
@@ -102,7 +152,7 @@
 
    <!-- Twitter -->
    <a
-      class="btn btn-outline-light btn-floating m-1"
+      class="btn btn-floating m-1"
       class="text-white"
       role="button"
       ><i class="fa fa-twitter"></i
@@ -110,7 +160,7 @@
 
    <!-- Google -->
    <a
-      class="btn btn-outline-light btn-floating m-1"
+      class="btn btn-floating m-1"
       class="text-white"
       role="button"
       ><i class="fa fa-google"></i
@@ -118,7 +168,7 @@
 
    <!-- Instagram -->
    <a
-      class="btn btn-outline-light btn-floating m-1"
+      class="btn btn-floating m-1"
       class="text-white"
       role="button"
       ><i class="fa fa-instagram"></i

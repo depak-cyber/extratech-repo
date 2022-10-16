@@ -38,7 +38,7 @@
 
        @include('users.navbar')
 
-      {{--  @include('users.mainSlider') --}}
+       @include('users.mainSlider')
 
       </div>
 

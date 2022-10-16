@@ -64,12 +64,12 @@ h2 {
     display: block;
     width: 70px;
     height: 5px;
-    background: #f7444e;
+    background: #9f1db9;
     margin: 10px auto 10px;
 }
 
 .heading_container h2 span {
-  color: #f7444e;
+  color: #D833A2;
 }
 
 .heading_container p {
@@ -150,7 +150,7 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
     padding: 5px 20px;
-    color: #131313;
+    color: #f4f0f0;
     text-align: center;
     text-transform: uppercase;
     border-radius: 5px;
@@ -167,11 +167,11 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #f7444e;
+  color: #dc1a98;
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link svg, .custom_nav-container .navbar-nav .nav-item.active .nav-link svg {
-  fill: #f7444e;
+  fill: #dc1a98;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -183,7 +183,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn:hover {
-  color: #f7444e;
+  color: #dc1a98;;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -280,7 +280,7 @@ a:focus {
 }
 
 .slider_section .detail-box h1 span {
-  color: #f7444e;
+  color: #a71d76;
 }
 
 .slider_section .detail-box p {
@@ -292,8 +292,8 @@ a:focus {
 .slider_section .detail-box a {
     display: inline-block;
     padding: 12px 45px;
-    background-color: #f7444e;
-    border: 1px solid #f7444e;
+    background-color: #b91d83;
+    border: 1px solid  #b91d83;
     color: #ffffff;
     border-radius: 0;
     -webkit-transition: all 0.3s;
@@ -304,7 +304,7 @@ a:focus {
 
 .slider_section .detail-box a:hover {
   background-color: transparent;
-  color: #f7444e;
+  color:  #b91d83;
 }
 
 .slider_section .img-box img {
@@ -334,7 +334,7 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 20px;
   height: 20px;
-  background-color: #f7444e;
+  background-color:  #b91d83;
 }
 
 .slider_bg_box {
@@ -659,7 +659,7 @@ a:focus {
 .subscribe_section .subscribe_form form button {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #f7444e;
+  background-color: #72247e;
   border: 1px solid #f7444e;
   color: #ffffff;
   border-radius: 35px;
@@ -771,7 +771,7 @@ a:focus {
   height: 50px;
   opacity: 1;
   color: #ffffff;
-  background-color: #f7444e;
+  background-color: #c229d9;
   border-radius: 100%;
 }
 

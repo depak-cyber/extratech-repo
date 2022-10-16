@@ -29,20 +29,3 @@
 
          <!-- end slider section -->
 
-        {{--  <div class="carousel-caption d-none d-md-block">
-            <div class="custom-carousel-content">
-                <h1>
-                    <span>Best Ecommerce Solutions 1 </span>
-                    to Boost your Brand Name &amp; Sales
-                </h1>
-                <p>
-                    We offer an industry-driven and successful digital marketing strategy that helps our clients
-                    in achieving a strong online presence and maximum company profit.
-                </p>
-                <div>
-                    <a href="#" class="btn btn-slider">
-                        Get Now
-                    </a>
-                </div>
-            </div>
-        </div> --}}

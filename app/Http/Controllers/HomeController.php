@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Slider;
 use App\Models\Services;
 use App\Models\Testimonal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -29,9 +32,15 @@ class HomeController extends Controller
      {
         $services = Services::all();
         $testimonal = Testimonal::all();
-        return view('welcome',compact('services','testimonal'));
+        $sliders = Slider::all();
+        return view('welcome',compact('services','testimonal','sliders'));
      }
 
-
+     public function logout()
+     {
+         Session::flush();
+         Auth::logout();
+         return redirect('login');
+     }
 
 }

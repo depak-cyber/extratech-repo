@@ -21,6 +21,7 @@ use App\Https\Middleware\AdminMiddleware;
 
         Route::controller(HomeController::class)->group(function(){
             Route::get('/', 'index')->name('login');
+            Route::get('logout', 'logout')->name('logout');
             });
 
 
