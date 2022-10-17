@@ -80,7 +80,7 @@ class SlidersController extends Controller
                 if ($request->hasFile('image')) {
 
                     $request->validate([
-                        'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
+                        'image' => 'mimes:jpg,png,jpeg,gif,svg|max:2048' // Only allow .jpg, .bmp and .png file types.
                     ]);
 
                     $request->file('image')->store('frontend/images');

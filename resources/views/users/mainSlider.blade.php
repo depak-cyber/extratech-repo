@@ -15,9 +15,10 @@
                         <div class="custom-carousel-content">
                             <h1>
                                 {{$sliderItem ->heading}}
-                                <br>
-                                {{$sliderItem ->subheading}}
                             </h1>
+                            <h2>
+                                {{$sliderItem ->subheading}}
+                            </h2>
                             <p>
                                 {{$sliderItem ->paragraph}}
                             </p>
