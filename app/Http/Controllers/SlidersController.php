@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\File;
 class SlidersController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
     public function index()
     {
    // $sliders = Slider::all();
