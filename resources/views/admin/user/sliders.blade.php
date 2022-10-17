@@ -18,7 +18,6 @@
                          <th>Heading</th>
                          <th>Subheading</th>
                          <th>Paragraph</th>
-                         <th>Status</th>
                          <th>Action</th>
                        </tr>
                      </thead>
@@ -35,7 +34,6 @@
                            <td>{{$item->heading}}</td>
                            <td>{{$item->subheading}}</td>
                            <td>{{$item->paragraph}}</td>
-                           <td>{{$item->status == '1' ? 'Enable':'Disable'}}</td>
                            <td>
                              <a href ="{{url('/edit-sliders'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-pencil-square-o" aria-hidden="true"></i>  Edit</a>
                              <a href ="{{url('delete-sliders/'.$item ['id']) }}" class="btn btn-success"><i class= "fa fa-trash" aria-hidden="true"></i>  Delete</a>

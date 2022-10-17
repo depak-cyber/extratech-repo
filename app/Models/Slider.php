@@ -18,6 +18,5 @@ class Slider extends Model
          'heading',
          'subheading',
          'paragraph',
-         'status'
      ];
 }

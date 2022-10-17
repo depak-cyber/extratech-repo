@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('heading');
             $table->string('subheading');
             $table->string('paragraph');
-            $table->tinyInteger('status')->default('1')->comment('1=Enable, 0=Disable');
             $table->timestamps();
         });
     }

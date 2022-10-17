@@ -36,14 +36,12 @@ class SlidersController extends Controller
             'heading'=>['string'],
             'subheading'=>['string'],
             'paragraph'=>['string'],
-            'status'=>['string'],
         ]);
 
         $sliders= new Slider;
         $sliders->heading=$validate['heading'];
         $sliders->subheading=$validate['subheading'];
         $sliders->paragraph=$validate['paragraph'];
-        $sliders->status=$request->status == true ? '1':'0';
 
         if ($request->hasFile('image')) {
 
@@ -78,7 +76,6 @@ class SlidersController extends Controller
                 $subheading = $request->input('subheading');
                 $paragraph = $request->input('paragraph');
                // $image = $request->input('image');
-                $status = $request->input('status');
 
                 if ($request->hasFile('image')) {
 
@@ -96,7 +93,6 @@ class SlidersController extends Controller
                     'heading'=>$heading,
                     'subheading'=>$subheading,
                     'image'=>$image,
-                    'status'=>$status,
                     ]);
 
             #when update is successful then it will return given message

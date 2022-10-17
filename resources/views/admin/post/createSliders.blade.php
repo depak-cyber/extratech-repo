@@ -31,10 +31,6 @@
                                                 <label for="paragraph">Paragraph</label>
                                                 <input class="form-control" type="text" name="paragraph" id="paragraph" placeholder="Paragraph" ><br>
                                             </div>
-                                            <div class="form-group">
-                                                <label>Status</label>
-                                                <input type="checkbox" name="status" id="status" style="width:30px;height:30px;display:block;" ><br>
-                                            </div>
                                             <div class="card-footer">
                                                 <button class="btn btn-primary" type="submit"> Save </button>
                                             </div>

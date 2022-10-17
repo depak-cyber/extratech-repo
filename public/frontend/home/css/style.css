@@ -64,9 +64,11 @@ h2 {
     display: block;
     width: 70px;
     height: 5px;
-    background: #9f1db9;
+  /*   background: #9f1db9; */
     margin: 10px auto 10px;
 }
+
+
 
 .heading_container h2 span {
   color: #D833A2;
@@ -877,10 +879,6 @@ a:focus {
   font-size: 18px;
 }
 
-.footer_section .footer_social a:hover {
-  color: #f7444e;
-}
-
 .footer_section .map_container {
   width: 100%;
   height: 175px;
@@ -908,6 +906,20 @@ a:focus {
   text-align: center;
   margin-top: 25px;
 }
+
+#seperator {
+    border: 5;
+    height: 3px;
+    width: 60px;
+    background: #f403a4;
+  }
+
+  #seperator1{
+    border: 5;
+    height: 3px;
+    width: auto;
+    background: #f505cd;
+  }
 
 .footer_section .footer-info p {
     color: #ffffff;
@@ -958,6 +970,7 @@ li.nav-item ul li a {
 li.nav-item ul li a:hover, li.nav-item ul li a:focus {
     color: #f7444e;
 }
+
 
 .inner_page_head {
     background: #f7444e;
@@ -1120,6 +1133,39 @@ form input[type="submit"]:focus {
     font-weight: 400;
 }
 
+/* new carousel css */
+.carousel-item .custom-carousel-content{
+    width: 50%;
+    transform: translate(0%, -10%);
+}
+.custom-carousel-content{
+    text-align: start;
+}
+.custom-carousel-content h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.custom-carousel-content h1 span{
+    color: #fbff00;
+}
+.custom-carousel-content p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.custom-carousel-content .btn-slider{
+    border: 1px solid #fff;
+    border-radius: 0px;
+    padding: 8px 26px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+/* end new carousel css */
 http://kute-themes.com/html/boutique/html/index.html
 https://template.hasthemes.com/noraure/noraure/index.html
 https://preview.hasthemes.com/xoss-preview/xoss/index.html

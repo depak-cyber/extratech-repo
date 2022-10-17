@@ -1,4 +1,4 @@
-      <!-- why section -->
+      <!-- services section -->
       <section class="why_section layout_padding">
         <div class="container">
            <div class="heading_container heading_center">
@@ -32,4 +32,4 @@
            </div>
         </div>
      </section>
-     <!-- end why section -->
+     <!-- end services section -->

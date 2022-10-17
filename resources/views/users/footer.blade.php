@@ -1,7 +1,7 @@
   <!-- footer start -->
  <!-- Footer -->
  <footer
- class="text-center text-lg-start text-white"
+ class=" footer-section text-center text-lg-start text-white"
  style="background-color: #361E94"
  >
 <!-- Grid container -->
@@ -26,7 +26,7 @@
 
  <!-- Grid column -->
  <div class="col-lg-3 col-md-6 mb-4 footer-links">
-   <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6><hr>
+   <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6><hr id="seperator">
    <p>
      <a class="text-white">Digital Marketing</a>
    </p>
@@ -62,7 +62,7 @@
  <!-- Grid column -->
  <!-- Grid column -->
  <div class="col-lg-3 col-md-6 mb-4 footer-links">
-    <h6 class="text-uppercase mb-4 font-weight-bold">Academy</h6><hr>
+    <h6 class="text-uppercase mb-4 font-weight-bold">Academy</h6><hr id="seperator">
     <p>
       <a class="text-white">Network & System Support</a>
     </p>
@@ -98,7 +98,7 @@
  <!-- Grid column -->
   <!-- Grid column -->
  <div class="col-lg-3 col-md-6 mb-4 footer-links">
-    <h6 class="text-uppercase mb-4 font-weight-bold">Company</h6><hr>
+    <h6 class="text-uppercase mb-4 font-weight-bold">Company</h6><hr id="seperator">
     <p>
       <a class="text-white">Home </a>
     </p>
@@ -141,7 +141,7 @@
 
  <!-- Grid column -->
  <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-    <p style="font-weight:bold;">Join Our Social Community</p><hr>
+    <p style="font-weight:bold;">Join Our Social Community</p><hr id="seperator1">
    <!-- Facebook -->
    <a
       class="btn btn-floating m-1"
