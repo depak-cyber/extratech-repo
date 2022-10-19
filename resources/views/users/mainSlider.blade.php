@@ -1,6 +1,6 @@
 
             <!-- slider section -->
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 
                 <div class="carousel-inner">
 
@@ -12,7 +12,7 @@
                       @endif
 
                       <div class="carousel-caption d-none d-md-block">
-                        <div class="custom-carousel-content">
+                        <div class="custom-carousel-content ">
                             <h1>
                                 {{$sliderItem ->heading}}
                             </h1>
@@ -41,15 +41,3 @@
 
 
 
-         {{--        <div class="carousel-caption d-none d-md-block">
-                      <h1>
-                          <span>
-                              {{$sliderItem ->heading}}
-                          </span>
-                          <br>
-                          {{$sliderItem ->subheading}}
-                       </h1>
-                        <p class="text-white">
-                          {{$sliderItem ->paragraph}}
-                       </p>
-                    </div> --}}

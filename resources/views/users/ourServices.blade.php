@@ -14,7 +14,7 @@
               <div class="col-md-4">
                  <div>
                     <div class="img-box">
-                     <img src="/admin/icons/{{$service->icon}}" width="80" height="80" alt="srvtimg" class="img img-responsive">
+                     <img class="img-fluid" src="/admin/icons/{{$service->icon}}" width="80" height="80" alt="srvtimg" class="img img-responsive">
                     </div>
                     <div>
                        <h5>
