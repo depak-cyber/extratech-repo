@@ -1147,9 +1147,8 @@ form input[type="submit"]:focus {
     font-size: 40px;
     font-weight: 700;
     letter-spacing: .005em;
-    line-height: 58px;
+    line-height: 50px;
     color: #ec3ab0;
-    font-size: 40px;
     margin-bottom: 0.11em;
     }
 

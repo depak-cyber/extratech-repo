@@ -8,7 +8,7 @@
 
                   <div class="carousel-item {{$key == 0 ? 'active':'' }}">
                       @if ($sliderItem ->image)
-                      <img src="/frontend/images/{{$sliderItem->image}}" alt="tsttimg">
+                      <img class="img-fluid" src="/frontend/images/{{$sliderItem->image}}" alt="tsttimg">
                       @endif
 
                       <div class="carousel-caption d-none d-md-block">
